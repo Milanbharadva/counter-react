@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 function App() {
-  let [count, setcount] = useState(0);
-
+  const [count, setcount] = useState(0);
+  function add() {
+    setcount(count+1);
+  }
+  function minus() {
+    setcount(count-1);
+  }
   
   return (
     <div className="App">
       <div className="container">
-        <button onClick={setcount(count-1)}>-</button>
+        <button onClick={minus}>-</button>
         <h1>{count}</h1>
-        <button onClick={setcount(count+1)}>+</button>
+        <button onClick={add}>+</button>
       </div>
     </div>
   );
